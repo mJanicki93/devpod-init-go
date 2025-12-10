@@ -19,7 +19,7 @@ packages=(
 
 for package in "${packages[@]}"; do
   echo "Installing $package..."
-  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+  apt-get install "$package"
 done
 
 echo "All packages installed"
