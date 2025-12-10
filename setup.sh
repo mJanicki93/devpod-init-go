@@ -19,7 +19,7 @@ packages=(
 
 for package in "${packages[@]}"; do
   echo "Installing $package..."
-  apt-get install "$package"
+  sudo apt-get install "$package"
 done
 
 echo "All packages installed"
