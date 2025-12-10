@@ -9,18 +9,22 @@ ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME/nvim"
 # ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 
-packages=(
-  npm
-  lazygit
-  kubectl
-  fd
-)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-for package in "${packages[@]}"; do
-  echo "Installing $package..."
-  sudo su vscode
-  sudo apt-get update
-  sudo apt-get install "$package"
-done
+brew install neovim
 
-echo "All packages installed"
+# packages=(
+#   npm
+#   lazygit
+#   kubectl
+#   fd
+# )
+#
+# for package in "${packages[@]}"; do
+#   echo "Installing $package..."
+#   sudo su vscode
+#   sudo apt-get update
+#   sudo apt-get install "$package"
+# done
+#
+# echo "All packages installed"
