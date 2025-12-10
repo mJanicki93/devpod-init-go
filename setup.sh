@@ -11,7 +11,6 @@ ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 
 packages=(
   npm
-  neovim
   lazygit
   kubectl
   fd
@@ -19,6 +18,7 @@ packages=(
 
 for package in "${packages[@]}"; do
   echo "Installing $package..."
+  sudo su vscode
   sudo apt-get update
   sudo apt-get install "$package"
 done
